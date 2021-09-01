@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.hexbow.frag.fragutil.OptionList
+        android:id="@+id/transOptsFrame"
+        android:layout_width="120dp"
+        android:layout_height="75dp"
+        app:color="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/delayOptsFrame"
+        app:layout_constraintEnd_toStartOf="@+id/delayOptsFrame"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transText2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/transText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Transitions"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/transOptsFrame"
+        app:layout_constraintStart_toStartOf="@+id/transOptsFrame"
+        app:layout_constraintTop_toTopOf="@+id/delayText2" />
+
+    <com.example.hexbow.frag.fragutil.OptionList
+        android:id="@+id/delayOptsFrame"
+        android:layout_width="120dp"
+        android:layout_height="75dp"
+        app:color="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/transOptsFrame"
+        app:layout_constraintTop_toBottomOf="@+id/delayText2" />
+
+    <TextView
+        android:id="@+id/delayText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Delay"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/delayOptsFrame"
+        app:layout_constraintStart_toStartOf="@+id/delayOptsFrame"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.hexbow.lamp.Lamp
+            android:id="@+id/frame_lamp3"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="150dp"
+            app:layout_constraintBottom_toBottomOf="@+id/frame_lamp4"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/frame_lamp4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/frame_lamp4"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.example.hexbow.lamp.Lamp
+            android:id="@+id/frame_lamp1"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/frame_lamp2"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/frame_lamp2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/frame_lamp2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.example.hexbow.lamp.Lamp
+            android:id="@+id/frame_lamp2"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/frame_lamp4"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frame_lamp1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.hexbow.lamp.Lamp
+            android:id="@+id/frame_lamp4"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/frame_lamp6"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frame_lamp3"
+            app:layout_constraintTop_toBottomOf="@+id/frame_lamp2" />
+
+        <com.example.hexbow.lamp.Lamp
+            android:id="@+id/frame_lamp5"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/frame_lamp6"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/frame_lamp6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/frame_lamp6" />
+
+        <com.example.hexbow.lamp.Lamp
+            android:id="@+id/frame_lamp6"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frame_lamp5"
+            app:layout_constraintTop_toBottomOf="@+id/frame_lamp4" />
+
+        <Button
+            android:id="@+id/addFrame"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/hexagon"
+            android:text="+"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/send"
+            app:layout_constraintEnd_toStartOf="@+id/frame_lamp4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frame_lamp3"
+            app:layout_constraintTop_toBottomOf="@+id/frame_lamp1" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/hexagon"
+            android:text="Play"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/frame_lamp6"
+            app:layout_constraintEnd_toStartOf="@+id/frame_lamp4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/frame_lamp3"
+            app:layout_constraintTop_toBottomOf="@+id/addFrame" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:requiresFadingEdge = "horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delayOptsFrame" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

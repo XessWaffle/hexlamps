@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.flask.colorpicker.ColorPickerView
+        android:id="@+id/cpv"
+        android:layout_width="289dp"
+        android:layout_height="284dp"
+        app:alphaSlider="true"
+        app:density="12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lightnessSlider="true"
+        app:lightnessSliderView="@+id/vls"
+        app:wheelType="FLOWER" />
+
+    <com.flask.colorpicker.slider.LightnessSlider
+        android:id="@+id/vls"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cpv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/swatchView"
+        android:layout_width="0dp"
+        android:layout_height="283dp"
+        app:layout_constraintBottom_toTopOf="@+id/vls"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cpv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/transText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Transitions"
+        android:textAllCaps="false"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/transOpts"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/transOpts"
+        app:layout_constraintTop_toTopOf="@+id/delayText" />
+
+    <TextView
+        android:id="@+id/swatchesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swatches"
+        android:textAllCaps="false"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/swatchOpts"
+        app:layout_constraintStart_toStartOf="@+id/swatchOpts"
+        app:layout_constraintTop_toTopOf="@+id/delayText" />
+
+    <TextView
+        android:id="@+id/delayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Delay"
+        android:textAllCaps="false"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/delayOpts"
+        app:layout_constraintStart_toStartOf="@+id/delayOpts"
+        app:layout_constraintTop_toBottomOf="@+id/vls" />
+
+    <com.example.hexbow.frag.fragutil.OptionList
+        android:id="@+id/swatchOpts"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        app:color="@color/gray"
+        app:layout_constraintEnd_toStartOf="@+id/delayOpts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delayText" />
+
+    <com.example.hexbow.frag.fragutil.OptionList
+        android:id="@+id/delayOpts"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        app:color="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delayText" />
+
+    <com.example.hexbow.frag.fragutil.OptionList
+        android:id="@+id/transOpts"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        app:color="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/delayOpts"
+        app:layout_constraintTop_toBottomOf="@+id/delayText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
